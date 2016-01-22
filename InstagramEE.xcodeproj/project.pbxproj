@@ -72,12 +72,12 @@
 			isa = PBXGroup;
 			children = (
 				7A0836541C51E46C0024F8AA /* AppDelegate.swift */,
+				7A35939F1C51EE93009B6563 /* GramTableViewCell.swift */,
 				7A0836561C51E46C0024F8AA /* PhotosViewController.swift */,
 				7A0836581C51E46C0024F8AA /* Main.storyboard */,
 				7A08365B1C51E46C0024F8AA /* Assets.xcassets */,
 				7A08365D1C51E46C0024F8AA /* LaunchScreen.storyboard */,
 				7A0836601C51E46C0024F8AA /* Info.plist */,
-				7A35939F1C51EE93009B6563 /* GramTableViewCell.swift */,
 			);
 			path = InstagramEE;
 			sourceTree = "<group>";
