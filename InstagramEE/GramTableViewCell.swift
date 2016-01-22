@@ -7,11 +7,13 @@
 //
 
 import UIKit
-import AFNetworking
 
 class GramTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var gramsView: UIView!
+
+
+    
+    @IBOutlet weak var gramView2: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

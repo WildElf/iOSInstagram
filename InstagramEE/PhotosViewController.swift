@@ -18,7 +18,7 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-            tableView.rowHeight = 320;
+            tableView.rowHeight = 320
             tableView.dataSource = self
             tableView.delegate = self
         
@@ -36,7 +36,7 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
 					if let data = dataOrNil {
       if let responseDictionary = try! NSJSONSerialization.JSONObjectWithData(
 				data, options:[]) as? NSDictionary {
-					NSLog("response: \(responseDictionary)")
+					//NSLog("response: \(responseDictionary)")
 					self.grams = responseDictionary["data"] as? [NSDictionary]
                     self.tableView.reloadData()
                         }
@@ -52,12 +52,30 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("gram", forIndexPath: indexPath) as! GramTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("gramCell", forIndexPath: indexPath) as! GramTableViewCell
+        
+        let gram = grams![indexPath.row]
+        let profileURL = gram.valueForKeyPath("images.standard_resolution.url") as! String
+        
+        let imageUrl = NSURL(string: profileURL)
+        NSLog("URL: \(profileURL)")
+        cell.gramView2.setImageWithURL(imageUrl!)
+        
       return cell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        if let grams = grams {
+            return grams.count
+        } else {
+            return 0
+        }
     }
+    /*
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        // do something here
+    }
+*/
 }
 
