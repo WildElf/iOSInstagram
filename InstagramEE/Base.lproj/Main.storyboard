@@ -13,26 +13,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="99" sectionHeaderHeight="28" sectionFooterHeight="28" id="z2Y-fP-ED2">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="128"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="174" sectionHeaderHeight="28" sectionFooterHeight="28" id="HLC-L2-9Bg">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="575"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="gram" rowHeight="99" id="LfW-Ze-Cm5" customClass="GramTableViewCell" customModule="InstagramEE" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="99"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="gramCell" rowHeight="174" id="pEF-7b-yd5" customClass="GramTableViewCell" customModule="InstagramEE" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="174"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LfW-Ze-Cm5" id="ybs-x1-kNK">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="98.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pEF-7b-yd5" id="aMw-vg-Izj">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="173.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="gn7-la-dIm">
-                                                    <rect key="frame" x="0.0" y="-14" width="240" height="128"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="c2F-hi-pDw">
+                                                    <rect key="frame" x="0.0" y="8" width="319" height="170"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="gramsView" destination="ybs-x1-kNK" id="Shv-dE-0Hn"/>
+                                            <outlet property="gramView2" destination="c2F-hi-pDw" id="8nf-EM-GrQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -41,12 +41,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="z2Y-fP-ED2" id="snc-Ye-NNA"/>
+                        <outlet property="tableView" destination="HLC-L2-9Bg" id="YFf-PP-EeN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="171" y="383"/>
+            <point key="canvasLocation" x="185" y="374"/>
         </scene>
     </scenes>
 </document>
