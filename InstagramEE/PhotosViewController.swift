@@ -60,6 +60,7 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let imageUrl = NSURL(string: profileURL)
         NSLog("URL: \(profileURL)")
         cell.gramView2.setImageWithURL(imageUrl!)
+        cell.gramView2.sizeToFit()
         
       return cell
     }
