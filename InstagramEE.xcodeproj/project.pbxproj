@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		272A56621C5B14640079BE7F /* PhotoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272A56611C5B14640079BE7F /* PhotoDetailsViewController.swift */; };
 		7A0836551C51E46C0024F8AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0836541C51E46C0024F8AA /* AppDelegate.swift */; };
 		7A0836571C51E46C0024F8AA /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0836561C51E46C0024F8AA /* PhotosViewController.swift */; };
 		7A08365A1C51E46C0024F8AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A0836581C51E46C0024F8AA /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		272A56611C5B14640079BE7F /* PhotoDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewController.swift; sourceTree = "<group>"; };
 		7A0836511C51E46C0024F8AA /* InstagramEE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramEE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A0836541C51E46C0024F8AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A0836561C51E46C0024F8AA /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				7A0836541C51E46C0024F8AA /* AppDelegate.swift */,
 				7A35939F1C51EE93009B6563 /* GramTableViewCell.swift */,
 				7A0836561C51E46C0024F8AA /* PhotosViewController.swift */,
+				272A56611C5B14640079BE7F /* PhotoDetailsViewController.swift */,
 				7A0836581C51E46C0024F8AA /* Main.storyboard */,
 				7A08365B1C51E46C0024F8AA /* Assets.xcassets */,
 				7A08365D1C51E46C0024F8AA /* LaunchScreen.storyboard */,
@@ -214,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				272A56621C5B14640079BE7F /* PhotoDetailsViewController.swift in Sources */,
 				7A3593A01C51EE93009B6563 /* GramTableViewCell.swift in Sources */,
 				7A0836571C51E46C0024F8AA /* PhotosViewController.swift in Sources */,
 				7A0836551C51E46C0024F8AA /* AppDelegate.swift in Sources */,
