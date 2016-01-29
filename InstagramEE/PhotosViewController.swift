@@ -45,8 +45,32 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
 		});
 		task.resume()
 		
+        let refreshControl = UIRefreshControl()
+        
 	}
 	
+    func refreshControlAction(refreshControl: UIRefreshControl)
+    {
+        let clientId = "e05c462ebd86446ea48a5af73769b602"
+        let url = NSURL(string:"https://api.instagram.com/v1/media/popular?client_id=\(clientId)")
+        let request = NSURLRequest(URL: url!)
+        
+        let session = NSURLSession(
+            configuration: NSURLSessionConfiguration.defaultSessionConfiguration(),
+            delegate: nil,
+            delegateQueue: NSOperationQueue.mainQueue())
+    
+        let task: NSURLSessionDataTask = session.dataTaskWithRequest(request,
+            completionHandler: {(data, response, error) in
+                
+                self.tableView.reloadData()
+                
+                refreshControl.endRefreshing()
+                
+        });
+        task.resume()
+    }
+        
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
