@@ -39,12 +39,14 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
 						data, options:[]) as? NSDictionary {
 							//NSLog("response: \(responseDictionary)")
 							self.grams = responseDictionary["data"] as? [NSDictionary]
-							self.tableView.reloadData()
+                            self.tableView.reloadData()
 					}
+                
 				}
+               
 		});
 		task.resume()
-		
+		self.tableView.reloadData()
         let refreshControl = UIRefreshControl()
         
 	}
@@ -84,8 +86,31 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
 		
 		let imageUrl = NSURL(string: profileURL)
 		NSLog("URL: \(profileURL)")
-		cell.gramView2.setImageWithURL(imageUrl!)
-		cell.gramView2.sizeToFit()
+		let imageRequest = NSURLRequest(URL: imageUrl!)
+        
+        cell.gramView2.setImageWithURLRequest(
+            imageRequest,
+            placeholderImage: nil,
+            success: { (imageRequest, imageResponse, image) -> Void in
+                
+                // imageResponse will be nil if the image is cached
+                if imageResponse != nil {
+                    print("Image was NOT cached, fade in image")
+                    cell.gramView2.alpha = 0.0
+                    cell.gramView2.image = image
+                    cell.gramView2.sizeToFit()
+                    UIView.animateWithDuration(0.3, animations: { () -> Void in
+                        cell.gramView2.alpha = 1.0
+                    })
+                } else {
+                    print("Image was cached so just update the image")
+                    cell.gramView2.image = image
+                    cell.gramView2.sizeToFit()
+                }
+            },
+            failure: { (imageRequest, imageResponse, error) -> Void in
+                // do something for the failure condition
+        })
 		
 		return cell
 	}
